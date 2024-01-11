@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url("images/countdown.jpeg") no-repeat center center/cover;
+} 
+
