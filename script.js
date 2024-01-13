@@ -1,10 +1,10 @@
 import "./style.css"
 
 // Variables
-const daysEl = document.querySelector(".days")
-const hoursEl = document.querySelector(".hours")
-const minutesEl = document.querySelector(".minutes")
-const secondsEl = document.querySelector(".seconds")
+const daysEl = document.querySelector("#days")
+const hoursEl = document.querySelector("#hours")
+const minutesEl = document.querySelector("#minutes")
+const secondsEl = document.querySelector("#seconds")
 
 const coming = "1 Jan 2025"
 
@@ -20,7 +20,10 @@ const countdown = () => {
     const minutes = Math.floor(totalSeconds / 60) %60
     const seconds = Math.floor(totalSeconds) %60
 
-    console.log(days, hours, minutes, seconds)
+    daysEl.innerHTML = days
+    hoursEl.innerHTML = hours
+    minutesEl.innerHTML = minutes
+    secondsEl.innerHTML = seconds
 }
 
-countdown()
+setInterval(countdown, 1000)
