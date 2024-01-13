@@ -12,7 +12,7 @@ let leadingHours = 0
 let leadingMinutes = 0
 let leadingSeconds = 0
 
-const coming = "1 Jan 2025"
+const coming = "08 Aug 2024"
 
 // Function countdown
 const countdown = () => {
