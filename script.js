@@ -1,7 +1,14 @@
 import "./style.css"
 
+// Variables
+const daysEl = document.querySelector(".days")
+const hoursEl = document.querySelector(".hours")
+const minutesEl = document.querySelector(".minutes")
+const secondsEl = document.querySelector(".seconds")
+
 const coming = "1 Jan 2025"
 
+// Function countdown
 const countdown = () => {
     const comingDate = new Date(coming)
     const currentDate = new Date()
