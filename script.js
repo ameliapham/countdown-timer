@@ -1,10 +1,16 @@
 import "./style.css"
 
-// Variables
+// Variables for time values
 const daysEl = document.querySelector("#days")
 const hoursEl = document.querySelector("#hours")
 const minutesEl = document.querySelector("#minutes")
 const secondsEl = document.querySelector("#seconds")
+
+// Variables for leading zero
+let leadingDays = 0
+let leadingHours = 0
+let leadingMinutes = 0
+let leadingSeconds = 0
 
 const coming = "1 Jan 2025"
 
@@ -20,10 +26,36 @@ const countdown = () => {
     const minutes = Math.floor(totalSeconds / 60) %60
     const seconds = Math.floor(totalSeconds) %60
 
-    daysEl.innerHTML = days
-    hoursEl.innerHTML = hours
-    minutesEl.innerHTML = minutes
-    secondsEl.innerHTML = seconds
+    if (seconds < 10) {
+        leadingSeconds = "0" + seconds
+    } else {
+        leadingSeconds = seconds
+    }
+
+    if (minutes < 10) {
+        leadingMinutes = "0" + minutes
+    } else {
+        leadingMinutes = minutes
+    }
+
+    if (hours < 10) {
+        leadingHours = "0" + hours
+    } else {
+        leadingHours = hours
+    }
+
+    if (days < 10) {
+        leadingDays = "0" + days
+    } else {
+        leadingDays = days
+    }
+
+    daysEl.innerHTML = leadingDays
+    hoursEl.innerHTML = leadingHours
+    minutesEl.innerHTML = leadingMinutes
+    secondsEl.innerHTML = leadingSeconds
+
+    
 }
 
 setInterval(countdown, 1000)
