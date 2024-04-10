@@ -1,2 +1,3 @@
 # countdown-timer
-Link of project: https://ap-countdown-timer.vercel.app/
+
+For a live experience, visit my [online demo](https://ap-countdown-timer.vercel.app/).
